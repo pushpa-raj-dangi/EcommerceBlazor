@@ -1,0 +1,10 @@
+C:\D\Ecommerce\Dtos\bin\Debug\netcoreapp3.1\Dtos.deps.json
+C:\D\Ecommerce\Dtos\bin\Debug\netcoreapp3.1\Dtos.dll
+C:\D\Ecommerce\Dtos\bin\Debug\netcoreapp3.1\Dtos.pdb
+C:\D\Ecommerce\Dtos\obj\Debug\netcoreapp3.1\Dtos.csproj.AssemblyReference.cache
+C:\D\Ecommerce\Dtos\obj\Debug\netcoreapp3.1\Dtos.GeneratedMSBuildEditorConfig.editorconfig
+C:\D\Ecommerce\Dtos\obj\Debug\netcoreapp3.1\Dtos.AssemblyInfoInputs.cache
+C:\D\Ecommerce\Dtos\obj\Debug\netcoreapp3.1\Dtos.AssemblyInfo.cs
+C:\D\Ecommerce\Dtos\obj\Debug\netcoreapp3.1\Dtos.csproj.CoreCompileInputs.cache
+C:\D\Ecommerce\Dtos\obj\Debug\netcoreapp3.1\Dtos.dll
+C:\D\Ecommerce\Dtos\obj\Debug\netcoreapp3.1\Dtos.pdb

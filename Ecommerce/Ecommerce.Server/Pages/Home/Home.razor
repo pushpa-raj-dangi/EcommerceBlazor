@@ -1,0 +1,28 @@
+﻿@page "/application/home"
+@inject IProductService productService
+@using DataAccess.Models
+@using Ecommerce.Server.Models 
+@layout PublicLayout
+
+<MudContainer MaxWidth="MaxWidth.Large">
+
+<Slider></Slider>
+
+<FeatureCard></FeatureCard>
+    <LatestProduct></LatestProduct>
+</MudContainer>
+<HomeFooter></HomeFooter>
+
+<h1>Products</h1>
+@foreach(var item in Products)
+{
+    
+}
+
+@code{
+   public IEnumerable<Product> Products { get; set; }
+    protected override async Task OnInitializedAsync()
+    {
+        Products = await productService.GetProducts();
+    }
+}

@@ -1,0 +1,120 @@
+﻿<div Style="background: #2e2e54">
+
+    <MudContainer MaxWidth="MaxWidth.Large" Class="py-15">
+        <MudGrid>
+            <MudItem md="4">
+                <ul class="footer-list">
+
+                    <li class="footer-li" data-spm-anchor-id="a2a0e.11779170.footer_top.i2.70fd2d2bxrtm3o"><a href="">Help Center</a></li>
+
+                    <li class="footer-li" data-spm-anchor-id="a2a0e.11779170.footer_top.i1.70fd2d2bxrtm3o"><a href="" data-spm-anchor-id="a2a0e.11779170.footer_top.2">How to Buy</a></li>
+
+                    <li class="footer-li"><a href="" data-spm-anchor-id="a2a0e.11779170.footer_top.3">Returns &amp; Refunds</a></li>
+
+                    <li class="footer-li"><a href="" data-spm-anchor-id="a2a0e.11779170.footer_top.4">Contact Us</a></li>
+
+                </ul>
+                <ul class="footer-list">
+
+                    <li class="footer-li"><a href="" data-spm-anchor-id="a2a0e.11779170.footer_top.5">Daraz University</a></li>
+
+                    <li class="footer-li"><a href="" data-spm-anchor-id="a2a0e.11779170.footer_top.6">Sell on Daraz</a></li>
+
+                    <li class="footer-li"><a href="" data-spm-anchor-id="a2a0e.11779170.footer_top.7">Code of Conduct</a></li>
+
+                </ul>
+            </MudItem>
+            <MudItem md="4">
+                <ul class="footer-list">
+
+                    <li class="footer-li">
+
+                        <a href="">About</a>
+
+                    </li>
+
+                    <li class="footer-li">
+
+                        <a href="">Careers</a>
+
+                    </li>
+
+                    <li class="footer-li">
+
+                        <a href="">Blog</a>
+
+                    </li>
+
+                    <li class="footer-li">
+
+                        <a href="">Terms &amp; Conditiions</a>
+
+                    </li>
+
+                    <li class="footer-li">
+
+                        <a href="">Privacy Policy</a>
+
+                    </li>
+
+                    <li class="footer-li">
+
+                        <a href="">Digital Payments</a>
+
+                    </li>
+
+                    <li class="footer-li">
+
+                        <a href="">Customer University</a>
+
+                    </li>
+
+                    <li class="footer-li" data-spm-anchor-id="a2a0e.11779170.footer_top.i3.70fd2d2bxrtm3o">
+
+                        <a href="">Affiliate Program</a>
+
+                    </li>
+
+                </ul>
+            </MudItem>
+            <MudItem md="4">
+                <MudText Typo="Typo.h5" Style="color:white">
+                    Newsletter
+
+                </MudText>
+                <MudText Typo="Typo.caption" Style="color:whitesmoke">
+
+                    Sign up to our newsletter and get exclusive deals you wont find anywhere else straight to your inbox!
+                </MudText>
+                <div class="my-4">
+                    <MudTextField @bind-Value="Email"
+                                  Label="Email"
+                                  Variant="Variant.Outlined"
+                                  Adornment="Adornment.End"
+                                  AdornmentIcon="@Icons.Filled.Mail" />
+                    <MudButton Variant="Variant.Filled" EndIcon="@Icons.Material.Filled.Send" Color="Color.Primary" Class="my-4">SUBSCRIBE</MudButton>
+
+
+
+                </div>
+
+            </MudItem>
+        </MudGrid>
+    </MudContainer>
+</div>
+<style type="text/css">
+    .footer-list .footer-li {
+        margin: 10px 0px;
+    }
+
+        .footer-list .footer-li a {
+            color: white;
+        }
+</style>
+
+
+@code {
+    public double? Email { get; set; }
+    public int? Weight { get; set; }
+    public string Search { get; set; }
+}

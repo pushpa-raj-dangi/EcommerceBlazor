@@ -1,0 +1,85 @@
+﻿@inherits LayoutComponentBase
+
+
+<MudThemeProvider Theme="_themeManager.Theme" />
+<MudDialogProvider />
+<MudSnackbarProvider />
+
+<MudLayout>
+    <MudAppBar Elevation="0" Fixed="false" Style="@($"background:{Colors.Grey.Lighten4};height:50px")">
+        <MudContainer MaxWidth="MaxWidth.Large">
+        <MudAppBar Style="@($"background:{Colors.Grey.Lighten4};height:50px")" Fixed="false" Elevation="0">
+       
+    <MudSpacer />
+    <MudIconButton Size="Size.Small" Icon="@Icons.Material.Outlined.AccountCircle" /> <MudLink Color="Color.Default"  Typo="Typo.caption"  Href="#">My Account</MudLink>
+    <MudIconButton Class="ml-3" Size="Size.Small" Icon="@Icons.Material.Outlined.ShoppingCart" /> <MudLink Color="Color.Default" Typo="Typo.caption" Href="#">My Cart</MudLink>
+    <MudIconButton Class="ml-3" Size="Size.Small" Icon="@Icons.Material.Outlined.Outbox" /><MudLink Color="Color.Default" Typo="Typo.caption"  Href="#">Checkout</MudLink>
+
+</MudAppBar>
+        </MudContainer>
+    </MudAppBar>
+
+     <MudAppBar Elevation="_themeManager.AppBarElevation" Fixed="false" Style="@($"background:{Colors.Shades.White};height:100px")">
+       <MudContainer MaxWidth="MaxWidth.Large">
+        <MudAppBar Fixed="false" Elevation="0" Style="@($"background:{Colors.Shades.White}")">
+               @*<img  src="/Images/logo.png"/>*@
+            <h1 style=" color: #bc1b1b; font-size: 38px; margin-top: 34px; }">Mero<span style="color:red">Shop</span></h1>
+            <MudSpacer />
+            <div Style="margin-top:30px">
+             <MudBadge Content="5" Color="Color.Primary" Overlap="true" Bordered="true"  Class="mx-6  mt-5 my-4">
+                <MudButton Color="Color.Default" Class="rounded-0" Variant="Variant.Outlined"  DisableElevation="true" >Cart- $100  <MudIcon Icon="@Icons.Material.Filled.ShoppingCart" Class="ml-5" Color="Color.Default" />  </MudButton>
+            </MudBadge>
+            </div>
+        </MudAppBar>
+       </MudContainer>
+    </MudAppBar>
+    <HomeNav></HomeNav>
+    <MudMainContent>
+            @Body
+    </MudMainContent>
+</MudLayout>
+
+
+@code {
+
+     
+    private ThemeManagerTheme _themeManager = new ThemeManagerTheme
+    {
+        Theme = new MudBlazorAdminDashboard(),
+        DrawerClipMode = DrawerClipMode.Always,
+        FontFamily = "Montserrat",
+        DefaultBorderRadius = 6,
+        AppBarElevation = 1,
+        DrawerElevation = 1,
+    };
+
+    public bool _drawerOpen = true;
+    public bool _themeManagerOpen = false;
+
+    void DrawerToggle()
+    {
+        _drawerOpen = !_drawerOpen;
+    }
+
+    void OpenThemeManager(bool value)
+    {
+        _themeManagerOpen = value;
+    }
+
+    void UpdateTheme(ThemeManagerTheme value)
+    {
+        _themeManager = value;
+        StateHasChanged();
+    }
+
+    protected override void OnInitialized()
+    {
+        StateHasChanged();
+    }
+
+    private List<BreadcrumbItem> _items = new List<BreadcrumbItem>
+    {
+        new BreadcrumbItem("Personal", href: "#"),
+        new BreadcrumbItem("Dashboard", href: "#"),
+    };
+}

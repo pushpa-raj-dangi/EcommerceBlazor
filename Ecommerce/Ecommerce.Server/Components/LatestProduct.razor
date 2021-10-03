@@ -1,0 +1,55 @@
+﻿<MudText class="d-flex justify-center" Typo="Typo.h4">Latest Products</MudText>
+<MudGrid Class="my-15">
+    @foreach (var item in _source)
+    {
+        <MudItem Style="background:transparent" xs="2">
+            <MudCard Elevation="0" Class="d-flex flex-column align-center py-4 justify-center py-2 px-1 ">
+                <img src="/Images/@item.Icon" style="width:100%" />
+                <MudCardContent>
+                    <MudText Typo="Typo.caption" Style="color:black">@item.Title</MudText>
+                    <MudText Typo="Typo.body1" Color="Color.Primary">$200 <del style="color:black">$240</del></MudText>
+                </MudCardContent>
+                <MudCardActions>
+                </MudCardActions>
+            </MudCard>
+        </MudItem>
+    }
+</MudGrid>
+<style type="text/css">
+    button.mud-button-root.mud-icon-button.mud-icon-button-color-inherit.mud-ripple.mud-ripple-icon.align-self-center {
+        margin: -10px;
+    }
+   
+</style>
+
+@code {
+    private List<FeatureCardExample> _source = new List<FeatureCardExample>();
+
+    string[] colors = new string[4];
+
+
+    protected override void OnInitialized()
+    {
+        colors = new string[] { $"<MudIcon Icon='@Icons.Material.Filled.Favorite'/>", "<MudIcon Icon='@Icons.Material.Filled.Favorite'/>", "<MudIcon Icon='@Icons.Material.Filled.Favorite'/>", "<MudIcon Icon='@Icons.Material.Filled.Favorite'/>" };
+
+        FeatureCardExample featurecard = new FeatureCardExample { Title = "iphone 6", Icon = "product-1.jpg", Color = "#5a88ca" };
+        FeatureCardExample featurecard1 = new FeatureCardExample { Title = "Nokia Lumia", Icon = "product-2.jpg", Color = "#ffd900" };
+        FeatureCardExample featurecard2 = new FeatureCardExample { Title = "LG Leon 2020", Icon = "product-3.jpg", Color = "#fa8072" };
+        FeatureCardExample featurecard3 = new FeatureCardExample { Title = "Sony Microsoft", Icon = "product-4.jpg", Color = "#4abebd" };
+        FeatureCardExample featurecard4 = new FeatureCardExample { Title = "Sony Microsoft", Icon = "product-6.jpg", Color = "#4abebd" };
+        FeatureCardExample featurecard5 = new FeatureCardExample { Title = "Nokia", Icon = "product-5.jpg", Color = "#4abebd" };
+
+        _source.Add(featurecard);
+        _source.Add(featurecard1);
+        _source.Add(featurecard2);
+        _source.Add(featurecard3);
+        _source.Add(featurecard4);
+        _source.Add(featurecard5);
+
+
+    }
+
+
+
+
+}

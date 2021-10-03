@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "e9012726-0105-4f79-9259-b8996fd53e15": {
+      "ProjectGuid": "e9012726-0105-4f79-9259-b8996fd53e15",
+      "DisplayName": "Ecommerce.Server",
+      "ColorIndex": 0
+    },
+    "297b5e2b-072e-4997-8d8b-238c2f39cc2b": {
+      "ProjectGuid": "297b5e2b-072e-4997-8d8b-238c2f39cc2b",
+      "DisplayName": "DataAccess",
+      "ColorIndex": 1
+    },
+    "54addb89-0899-448a-bd61-d206240ec0a4": {
+      "ProjectGuid": "54addb89-0899-448a-bd61-d206240ec0a4",
+      "DisplayName": "API",
+      "ColorIndex": 2
+    },
+    "51925471-63ad-4186-a4c2-bf729163b09e": {
+      "ProjectGuid": "51925471-63ad-4186-a4c2-bf729163b09e",
+      "DisplayName": "Business",
+      "ColorIndex": 3
+    },
+    "1b59d6a4-07cb-4051-8982-25fa1e949c66": {
+      "ProjectGuid": "1b59d6a4-07cb-4051-8982-25fa1e949c66",
+      "DisplayName": "Dtos",
+      "ColorIndex": 4
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 5
+}

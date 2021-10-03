@@ -1,0 +1,49 @@
+﻿
+<MudGrid Class="my-15">
+    @foreach (var item in _source)
+    {
+        <MudItem xs="3">
+            <MudCard Elevation="0" Class="d-flex flex-column align-center py-4 justify-center py-2 px-1 " Style="@($"background:{item.Color};")">
+               <img src="/Images/@item.Icon" height="60"/>
+                <MudCardContent>
+                    <MudText Typo="Typo.h5" Style="color:white">@item.Title</MudText>
+                </MudCardContent>
+                <MudCardActions>
+                </MudCardActions>
+            </MudCard>
+        </MudItem>
+    }
+</MudGrid>
+<style type="text/css">
+    button.mud-button-root.mud-icon-button.mud-icon-button-color-inherit.mud-ripple.mud-ripple-icon.align-self-center {
+        margin: -10px;
+    }
+</style>
+
+@code {
+    private List<FeatureCardExample> _source = new List<FeatureCardExample>();
+
+    string[] colors = new string[4];
+
+
+    protected override void OnInitialized()
+    {
+        colors = new string[] { $"<MudIcon Icon='@Icons.Material.Filled.Favorite'/>", "<MudIcon Icon='@Icons.Material.Filled.Favorite'/>", "<MudIcon Icon='@Icons.Material.Filled.Favorite'/>", "<MudIcon Icon='@Icons.Material.Filled.Favorite'/>" };
+
+        FeatureCardExample featurecard = new FeatureCardExample { Title = "30 Days return", Icon = "1.png", Color = "#5a88ca" };
+        FeatureCardExample featurecard1 = new FeatureCardExample { Title = "Free shipping", Icon = "2.png", Color = "#ffd900" };
+        FeatureCardExample featurecard2 = new FeatureCardExample { Title = "Secure payments", Icon = "3.png", Color = "#fa8072" };
+        FeatureCardExample featurecard3 = new FeatureCardExample { Title = "New products", Icon = "4.png", Color = "#4abebd" };
+
+        _source.Add(featurecard);
+        _source.Add(featurecard1);
+        _source.Add(featurecard2);
+        _source.Add(featurecard3);
+
+
+    }
+
+
+
+
+}

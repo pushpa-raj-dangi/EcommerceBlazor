@@ -1,0 +1,15 @@
+C:\D\Ecommerce\DataAccess\bin\Debug\net5.0\DataAccess.deps.json
+C:\D\Ecommerce\DataAccess\bin\Debug\net5.0\DataAccess.runtimeconfig.json
+C:\D\Ecommerce\DataAccess\bin\Debug\net5.0\DataAccess.runtimeconfig.dev.json
+C:\D\Ecommerce\DataAccess\bin\Debug\net5.0\DataAccess.dll
+C:\D\Ecommerce\DataAccess\bin\Debug\net5.0\ref\DataAccess.dll
+C:\D\Ecommerce\DataAccess\bin\Debug\net5.0\DataAccess.pdb
+C:\D\Ecommerce\DataAccess\obj\Debug\net5.0\DataAccess.csproj.AssemblyReference.cache
+C:\D\Ecommerce\DataAccess\obj\Debug\net5.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\D\Ecommerce\DataAccess\obj\Debug\net5.0\DataAccess.AssemblyInfoInputs.cache
+C:\D\Ecommerce\DataAccess\obj\Debug\net5.0\DataAccess.AssemblyInfo.cs
+C:\D\Ecommerce\DataAccess\obj\Debug\net5.0\DataAccess.csproj.CoreCompileInputs.cache
+C:\D\Ecommerce\DataAccess\obj\Debug\net5.0\DataAccess.dll
+C:\D\Ecommerce\DataAccess\obj\Debug\net5.0\ref\DataAccess.dll
+C:\D\Ecommerce\DataAccess\obj\Debug\net5.0\DataAccess.pdb
+C:\D\Ecommerce\DataAccess\obj\Debug\net5.0\DataAccess.genruntimeconfig.cache

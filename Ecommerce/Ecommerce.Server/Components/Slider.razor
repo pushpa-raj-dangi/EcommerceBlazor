@@ -1,0 +1,59 @@
+﻿<MudCarousel @ref="_carousel" ItemsSource="@_source" Style="height:470px;" ShowArrows="@_arrows" ShowDelimiters="@_delimiters"  AutoCycle="@_autocycle">
+    <ItemTemplate>
+        <div class="d-flex flex-row justify-center"  style="height:100%">
+            <img src="@context"/>
+            <div class="slider-content">
+            <MudText Align="@Align.Center" Typo="Typo.h5" Class="mx-auto">@title[0]</MudText>
+            <MudButton Variant="Variant.Filled" StartIcon="@Icons.Material.Outlined.ArrowCircleUp" Color="Color.Error">Shop now</MudButton>
+            </div>
+        </div>
+    </ItemTemplate>
+</MudCarousel>
+<style type="text/css">
+    .slider-content {
+        position: absolute;
+        top: 26%;
+        text-align:left;
+        right: 10%;
+        width:30%;
+    }
+    .slider-content h5{
+        font-weight:bold;
+        text-align:left;
+        margin-bottom:18px;
+    }
+
+        .slider-content button {
+            text-transform: capitalize;
+        }
+        .slider-content .mud-button-icon-start{
+            transform:rotate(90deg)
+        }
+</style>
+@code {
+    private MudCarousel<string> _carousel;
+    private bool _arrows = true;
+    private bool _delimiters = true;
+    private bool _autocycle = true;
+    private IList<string> _source = new List<string>() { "/Images/h4-slide.png", "/Images/h4-slide2.png", "/Images/h4-slide3.png", "/Images/h4-slide3.png", "/Images/h4-slide4.png" };
+    private IList<string> title = new List<string>() { "JW Black Label 12 Yr 1000ml", "Fantech TWS Tx-1 MITHRIL 5.0 Wireless Earphones", "Dolphy Multifunctional Wall-Mounted Pull-up Bar Home Gy","OnePlus Bud" };
+
+    private async Task AddAsync()
+    {
+        _source.Add($"Item {_source.Count + 1}");
+        await Task.Delay(1);
+        _carousel.MoveTo(_source.Count - 1);
+    }
+
+    private async Task DeleteAsync(int index)
+    {
+        if (_source.Any())
+        {
+            _source.RemoveAt(index);
+            await Task.Delay(1);
+            _carousel.MoveTo(System.Math.Max(System.Math.Min(index, _source.Count - 1), 0));
+        }
+
+    }
+
+}

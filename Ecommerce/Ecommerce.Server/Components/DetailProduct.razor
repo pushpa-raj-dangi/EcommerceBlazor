@@ -1,0 +1,58 @@
+﻿
+<MudGrid Class="my-0">
+
+    <MudItem xs="6">
+        <img style="width:100%" src="/Images/product-2.jpg" />
+    </MudItem>
+    <MudItem xs="4">
+        <MudText Typo="Typo.h5" Style="font-weight:bold" Color="Color.Primary">JW Black Label 12 Yr 1000ml</MudText>
+        <div class="d-flex mt-5">
+            <MudText Color="Color.Primary" Typo="Typo.h6">$200</MudText>
+            <MudText Class="ml-4" Typo="Typo.h6"><del>$566</del></MudText>
+        </div>
+      <MudGrid Class="my-15">
+          <MudItem xs="3">
+              <MudNumericField @bind-Value="@_debounced"
+                               
+                               Max="1000"
+                               Min="1"
+                               Variant="Variant.Outlined"
+                               Adornment="Adornment.End"
+                               DebounceInterval="500"
+                               OnDebounceIntervalElapsed="HandleIntervalElapsed" />
+          </MudItem><MudItem xs="6">
+
+    <MudButton Class="d-flex" Variant="Variant.Filled" StartIcon="@Icons.Material.Filled.ShoppingCart" Color="Color.Primary">Add to cart</MudButton>
+
+    
+</MudItem>
+                    <MudItem xs="12">
+                        <MudText Color="Color.Primary" Typo="Typo.h5" Style="font-weight:bold" Class="my-4">Product Description</MudText>
+                        <MudText>
+                            
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam tristique, diam in consequat iaculis, est purus iaculis mauris, imperdiet facilisis ante ligula at nulla. Quisque volutpat nulla risus, id maximus ex aliquet ut. Suspendisse potenti. Nulla varius lectus id turpis dignissim porta. Quisque magna arcu, blandit quis felis vehicula, feugiat gravida diam. Nullam nec turpis ligula. Aliquam quis blandit elit, ac sodales nisl. Aliquam eget dolor eget elit malesuada aliquet. In varius lorem lorem, semper
+
+                            Mauris placerat vitae lorem gravida viverra. Mauris in fringilla ex. Nulla facilisi.  In malesuada pulvinar neque a consectetur. Nunc aliquam gravida purus, non malesuada sem accumsan in. Morbi vel sodales libero.
+                        </MudText>
+                    </MudItem>
+      </MudGrid>
+    </MudItem>
+</MudGrid>
+<style type="text/css">
+    .mud-main-content {
+        padding: 0 !important;
+    }
+    .mud-input > input.mud-input-root-outlined, div.mud-input-slot.mud-input-root-outlined{
+        padding:8px;
+    }
+</style>
+
+@code {
+    double _debounced;
+
+    void HandleIntervalElapsed(string debouncedText)
+    {
+        // at this stage, interval has elapsed
+        //Notice that debouncedText is string, not a number
+    }
+}
